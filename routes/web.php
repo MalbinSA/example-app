@@ -31,7 +31,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Post'], function(){
     Route::delete('/posts/{post}', 'DestroyController')->name('post.destroy');
 });
 
-Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin'], function() {
+Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::group(['namespace' => 'Post'], function (){
         Route::get('/post', 'IndexController')->name('admin.post.index');
     });
@@ -47,10 +47,6 @@ Route::get('/main', [MainController::class, 'index'])->name('main.index');
 Route::get('/contacts', [ContactController::class, 'index'])->name('contact.index');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 

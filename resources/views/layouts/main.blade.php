@@ -15,22 +15,25 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <!--<div class="collapse navbar-collapse" id="navbarNav">-->
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('main.index')}}">Main</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('post.index')}}">Posts</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('about.index')}}">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('contact.index')}}">Contacts</a>
-                        </li>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{route('main.index')}}">Main</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('post.index')}}">Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('about.index')}}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('contact.index')}}">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.post.index')}}">Admin</a>
+                    </li>
 
-                    </ul>
-                </div>
+                </ul>
+            </div>
             <!--</div>-->
         </nav>
     </div>
