@@ -14,6 +14,7 @@ class Post extends Model
     use Filterable;
     protected $table = 'posts';
     protected $guarded = false;
+    protected $fillable = [];
 
     public function category()
     {
