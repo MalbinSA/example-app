@@ -243,7 +243,7 @@ DataTable.fileSave = _saveAs;
  */
 
 /**
- * Get the sheet name for Excel exports.
+ * Get the sheet name for excel exports.
  *
  * @param {object}	config Button configuration
  */
@@ -348,7 +348,7 @@ var _isDuffSafari = function ()
 };
 
 /**
- * Convert from numeric position to letter for column names in Excel
+ * Convert from numeric position to letter for column names in excel
  * @param  {int} n Column number
  * @return {string} Column letter(s) name
  */
@@ -483,7 +483,7 @@ function _createNode( doc, nodeName, opts ) {
 }
 
 /**
- * Get the width for an Excel column based on the contents of that column
+ * Get the width for an excel column based on the contents of that column
  * @param  {object} data Data for export
  * @param  {int}    col  Column index
  * @return {int}         Column width
@@ -532,7 +532,7 @@ function _excelColWidth( data, col ) {
 	return max > 6 ? max : 6;
 }
 
-// Excel - Pre-defined strings to build a basic XLSX file
+// excel - Pre-defined strings to build a basic XLSX file
 var excelStrings = {
 	"_rels/.rels":
 		'<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'+
@@ -620,7 +620,7 @@ var excelStrings = {
 				'<fill>'+
 					'<patternFill patternType="none" />'+
 				'</fill>'+
-				'<fill>'+ // Excel appears to use this as a dotted background regardless of values but
+				'<fill>'+ // excel appears to use this as a dotted background regardless of values but
 					'<patternFill patternType="none" />'+ // to be valid to the schema, use a patternFill
 				'</fill>'+
 				'<fill>'+
@@ -994,7 +994,7 @@ DataTable.ext.buttons.csvHtml5 = {
 };
 
 //
-// Excel (xlsx) export
+// excel (xlsx) export
 //
 DataTable.ext.buttons.excelHtml5 = {
 	className: 'buttons-excel buttons-html5',
@@ -1004,7 +1004,7 @@ DataTable.ext.buttons.excelHtml5 = {
 	},
 
 	text: function ( dt ) {
-		return dt.i18n( 'buttons.excel', 'Excel' );
+		return dt.i18n( 'buttons.excel', 'excel' );
 	},
 
 	action: function ( e, dt, button, config ) {
@@ -1181,13 +1181,13 @@ DataTable.ext.buttons.excelHtml5 = {
 			addRow( data.header, rowPos );
 			$('row:last c', rels).attr( 's', '2' ); // bold
 		}
-	
+
 		dataStartRow = rowPos;
 
 		for ( var n=0, ie=data.body.length ; n<ie ; n++ ) {
 			addRow( data.body[n], rowPos );
 		}
-	
+
 		dataEndRow = rowPos;
 
 		if ( config.footer && data.footer ) {
@@ -1244,7 +1244,7 @@ DataTable.ext.buttons.excelHtml5 = {
 			config.customize( xlsx, config, dt );
 		}
 
-		// Excel doesn't like an empty mergeCells tag
+		// excel doesn't like an empty mergeCells tag
 		if ( $('mergeCells', rels).children().length === 0 ) {
 			$('mergeCells', rels).remove();
 		}
